@@ -4,7 +4,7 @@ import env from './config/env';
 import setupDatabase from './config/database';
 const app = express();
 
-setupDatabase(env.databaseUri);
+setupDatabase();
 app.use(bodyParser.json());
 
-app.listen(env.port, () => console.log("Server is running on Port: " + env.port))
+app.listen(env.port, () => console.log("Server is running on Port: " + env.port));

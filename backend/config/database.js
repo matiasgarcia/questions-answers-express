@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
+import env from './env';
 
-export default (databaseUri) => {
+export default () => {
   const { connect, connection } = mongoose;
-  connect(databaseUri, { useNewUrlParser: true });
+  connect(env.databaseUri, { useNewUrlParser: true });
   connection.once('open', () => console.log("MongoDB database connection established successfully"))
 };
