@@ -38,7 +38,7 @@
     ],
     "preset": "@shelf/jest-mongodb",
     "setupFilesAfterEnv": [
-      "./tests/setup.js"
+      "./tests/config/setupDatabase.js"
     ]
   },
   "scripts": {

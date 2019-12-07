@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import * as models from "../models";
+import * as models from "../../models";
 
 const clearDatabase = () => {
   for (let i in mongoose.connection.collections) {
