@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { AnswerSchema } from './answer';
+import { User } from './user';
 
 const QuestionSchema = new Schema({
   question: {
@@ -14,7 +15,7 @@ const QuestionSchema = new Schema({
   asker: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'User'
+    ref: User
   },
   answers: [
     AnswerSchema

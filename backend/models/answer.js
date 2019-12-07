@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+import { User } from './user';
 
 export const AnswerSchema = new Schema({
   answer: {
@@ -9,7 +10,7 @@ export const AnswerSchema = new Schema({
   provider: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'User'
+    ref: User
   }
 });
 
