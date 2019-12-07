@@ -11,7 +11,7 @@ const QuestionSchema = new Schema({
     type: Boolean,
     required: true,
   },
-  askerId: {
+  asker: {
     type: Schema.Types.ObjectId,
     required: true,
     ref: 'User'
@@ -21,4 +21,4 @@ const QuestionSchema = new Schema({
   ]
 });
 
-module.exports = model('Question', QuestionSchema);
+export const Question = model('Question', QuestionSchema);

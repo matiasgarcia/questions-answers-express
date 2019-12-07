@@ -6,7 +6,7 @@ export const AnswerSchema = new Schema({
     required: true,
     minlength: 2
   },
-  providerId: {
+  provider: {
     type: Schema.Types.ObjectId,
     required: true,
     ref: 'User'
