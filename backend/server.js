@@ -1,12 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const env = require('./config/env');
-const setupDatabase = require('./config/database');
+import express from 'express';
+import bodyParser from 'body-parser';
+import env from './config/env';
+import setupDatabase from './config/database';
 const app = express();
 
 setupDatabase(env.databaseUri);
 app.use(bodyParser.json());
 
-app.listen(env.port, function() {
-  console.log("Server is running on Port: " + env.port);
-});
+app.listen(env.port, () => console.log("Server is running on Port: " + env.port))

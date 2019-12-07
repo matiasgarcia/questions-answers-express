@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-module.exports = (databaseUri) => {
+export default (databaseUri) => {
   const { connect, connection } = mongoose;
   connect(databaseUri, { useNewUrlParser: true });
   connection.once('open', () => console.log("MongoDB database connection established successfully"))
